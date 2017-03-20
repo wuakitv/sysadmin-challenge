@@ -36,8 +36,8 @@ It has the following requirements:
 * Python 2.7
 * MySQL 5.7
 * Pip modules
- * Flask==0.12
- * Flask-MySQL==1.4.0
+  * Flask==0.12
+  * Flask-MySQL==1.4.0
 
 #### app.sql
 
@@ -49,9 +49,9 @@ Data to be imported into MySQL in SQL format. It can be imported directly to a M
 * If you cannot make the application work, you can still submit your proposal and explain the challenges you faced and what you did to try to solve them.
 * Commit from the very beginning and commit often. We value the possibility to review your git log.
 * There are many possible solutions to this exercise. Some technologies you can use (but you're not limited to) are:
- * Docker
- * Docker Compose
- * Kubernetes
- * Vagrant
- * Puppet
- * Ansible
+  * Docker
+  * Docker Compose
+  * Kubernetes
+  * Vagrant
+  * Puppet
+  * Ansible
