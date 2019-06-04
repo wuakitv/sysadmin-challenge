@@ -2,51 +2,65 @@
 
 ## Introduction
 
-We need to deploy a simple web application written in Python using the [Flask](http://flask.pocoo.org/) framework. This application will listen to the port 5000 (by default) and return the string _"Hello World!"_ . It needs to access data stored into a MySQL server.
+We need to deploy a new microservice to production that given a `GET` request to the `/hello` endpoint it will return a JSON response with the following content:
 
-Using any technology you like, deploy this application so we can get the expected result using the `curl`command as specified below.
-
-Using one single command we want to deploy all the required infrastructure for this application to work. After the application is working, we should get the following result:
-
-```
-$ curl http://127.0.0.1:5000
-Hello world!
+```json
+{ "hello": "world" }
 ```
 
-* **Note**: host and port may be different.
+## Architecture
 
-The provided solution needs to be uploaded into a public GitHub repository with a `README.md` file providing the following information:
+This microservice will have two components:
+* Web Application
+* Web proxy
+
+### Web Application
+
+Write a simple HTTP application in **any language** that listens to the port 8080. The application only needs to respond to following request:
+
+> `GET /hello`
+> Expected response: `{ "hello": "world" }`
+> Expected status: `200`
+
+Example:
+```
+$ curl http://localhost:8080/hello
+{ "hello": "world" }
+```
+
+Any language can be used to develop this application, but we recommend you to use a simple language and framework.
+
+### Web Proxy
+
+A reverse HTTP proxy needs to handle all the requests and send them to the backend application.
+
+Requirements for the proxy:
+* Pass `HTTP` (port 80) requests to the backend application (port 8080)
+* Pass `HTTPS` requests (port 443) to the backend application (port 8080) **(OPTIONAL)**
+  * In case `HTTPS` is implemented, redirect port 80 requests to 443
+
+We suggest to use `Nginx` or `Apache` as the proxy application, but any other software will also be accepted.
+
+## Deployment
+
+Using **one single command** we want to deploy all the required infrastructure for this application to work. After the application is working, we should get the following result:
+
+```
+$ curl -L http://IP_ADDRESS/hello
+{ "hello": "world" }
+```
+
+The provided solution needs to be uploaded into a public GitHub repository with a README.md file providing the following information:
+
 * Instructions on how to run your solution.
 * Requirements.
 * The rationale explaining why you chose this solution over others.
 
-## Provided files
 
-#### app.py
-
-The application itself. It should not be modified.
-
-To configure the connection to the MySQL server the following environment variables are required:
-* `MYSQL_USER` User to connect to MySQL
-* `MYSQL_PASS` Password to connect to MySQL
-* `MYSQL_HOST` Host to connect to MySQL
-* `MYSQL_DB` Database to be used
-
-It has the following requirements:
-* Python 2.7
-* MySQL 5.7
-* Pip modules
-  * Flask==0.12
-  * Flask-MySQL==1.4.0
-
-#### app.sql
-
-Data to be imported into MySQL in SQL format. It can be imported directly to a MySQL server.
-
-## Suggestions
-
-* We value simplicity over complexity.
-* If you cannot make the application work, you can still submit your proposal and explain the challenges you faced and what you did to try to solve them.
+## Additional notes
+* If `HTTPS` is implemented, the certificate can be self-signed.
+* Simplicity is valued over complexity.
+* If you get stuck in any step, you can still submit your proposal and explain the challenges you faced and what you did to try to solve them.
 * Commit from the very beginning and commit often. We value the possibility to review your git log.
 * There are many possible solutions to this exercise. Some technologies you can use (but you're not limited to) are:
   * Docker
