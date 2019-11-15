@@ -56,6 +56,7 @@ The provided solution needs to be uploaded into a public GitHub repository with 
 * Requirements.
 * The rationale explaining why you chose this solution over others.
 
+Please make sure the names *Rakuten*, *Rakuten TV* or *Wuaki* are not referenced in any place in your code.
 
 ## Additional notes
 * If `HTTPS` is implemented, the certificate can be self-signed.
