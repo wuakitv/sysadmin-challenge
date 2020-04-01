@@ -50,23 +50,35 @@ $ curl -L http://IP_ADDRESS/hello
 { "hello": "world" }
 ```
 
-The provided solution needs to be uploaded into a public GitHub repository with a README.md file providing the following information:
+## Required files
 
-* Instructions on how to run your solution.
-* Requirements.
-* The rationale explaining why you chose this solution over others.
+### README.md
 
-Please make sure the names *Rakuten*, *Rakuten TV* or *Wuaki* are not referenced in any place in your code.
+The provided solution needs to be uploaded into a public GitHub repository with a `README.md` file providing the following information:
+
+1. Clear instructions on how to use your solution. The clarity and precision of these instructions will be a key part of the test.
+2. Software requirements.
+3. The rationale explaining why you chose this solution over others.
+
+Please make sure the names *Rakuten*, *Rakuten TV* or *Wuaki* are not referenced in any place in your code or documentation.
+
+### ANSWERS.md
+
+Please answer the following questions in a markdown formated file called `ANSWERS.md`:
+
+1. How long did it take to finish the test?
+2. If you had more time, how could you improve your solution?
+3. What changes would you do to your solution to be deployed in a production environment?
+4. Why did you choose this language over others?
+5. What was the most challenging part and why?
+
+### whoami.json
+
+Please, describe yourself using JSON.
 
 ## Additional notes
+
 * If `HTTPS` is implemented, the certificate can be self-signed.
 * Simplicity is valued over complexity.
 * If you get stuck in any step, you can still submit your proposal and explain the challenges you faced and what you did to try to solve them.
 * Commit from the very beginning and commit often. We value the possibility to review your git log.
-* There are many possible solutions to this exercise. Some technologies you can use (but you're not limited to) are:
-  * Docker
-  * Docker Compose
-  * Kubernetes
-  * Vagrant
-  * Puppet
-  * Ansible
