@@ -1,4 +1,4 @@
-# Wuaki.tv SysAdmin/DevOps challenge
+# Rakuten TV SysAdmin/DevOps challenge
 
 ## Introduction
 
