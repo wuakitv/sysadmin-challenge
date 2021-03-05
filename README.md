@@ -2,7 +2,7 @@
 
 ## Introduction
 
-We need to deploy a new microservice to production that given a `GET` request to the `/hello` endpoint it will return a JSON response with the following content:
+We need to deploy a new microservice that given a `GET` request to the `/hello` endpoint it will return a JSON response with the following content:
 
 ```json
 { "hello": "world" }
