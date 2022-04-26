@@ -1,0 +1,16 @@
+
+{
+    "name": “Abhishek”,
+    "lastname": “Ranjan”,
+    "age": 30,
+    "nationality": “Indian”,
+    "livesin": “Japan”,
+    "passions": [
+    “Reading books”,
+    "Playing baskeball”
+    ],
+    “Tech Intro”: [
+        "Apprx 9+ yrs experienced Devops Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Linux Administrator,AWS Cloud, DevOps, CI/CD, Automation, Servers, and Vmware. 
+        Worked on different technology stack including git ,cloud ,kubernetes ,nginx ,chef,shell scripting,python,groovy ,php,terraform."
+    ]
+}
